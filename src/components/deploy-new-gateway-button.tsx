@@ -9,7 +9,6 @@ const GATEWAY_FACTORY_ADDRESS = "0x4c91065597eE71D9711F998bcaf8BefB0b0E9392";
 export default function DeployNewGatewayButton() {
     const [gateway, setGateway] = useState("");
     const { address, isConnected } = useAccount();
-    console.log("🚀 ~ DeployNewGatewayButton ~ isConnected:", isConnected);
     const { writeContract, isError, isPending, isSuccess, data } = useWriteContract();
 
     useEffect(() => {
