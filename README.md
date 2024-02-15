@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nerif Coding Challenge
 
-## Getting Started
+## Introduction
+This project is a Next.js application designed for the Nerif coding challenge. It enables users to interact with the `GatewayFactory` smart contract deployed on the Polygon Mumbai testnet. Users can deploy a new gateway contract and view the address of the deployed contract.
 
-First, run the development server:
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
+- Node.js version 14.x or later installed on your system.
+- An Ethereum wallet compatible with WalletConnect, such as MetaMask, installed in your browser.
+- Access to the Polygon Mumbai testnet in your Ethereum wallet.
 
+## Installation
+
+To install the project, follow these steps:
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/BonhommeAnthony/nerif-coding-challenge.git
+cd nerif-coding-challenge
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the necessary dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file at the root of your project and add the following line:
+```env
+NEXT_PUBLIC_PROJECT_ID=your_project_id_here
+```
+Replace `your_project_id_here` with your actual project ID obtained from [WalletConnect Cloud](https://cloud.walletconnect.com).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+To run the application locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Start the development server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Open your web browser and navigate to `http://localhost:3000`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Connect your web3 wallet using the Connect Wallet button.
 
-## Deploy on Vercel
+4. Deploy a new gateway by clicking the Deploy New Gateway button. The address of the deployed gateway will be displayed on the UI.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploying a New Gateway
+- Click the "Deploy New Gateway" button to initiate the deployment process.
+- Approve the transaction in your web3 wallet.
+- Once the transaction is confirmed, the address of the newly deployed gateway will be displayed on the screen and saved to local storage for future reference.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can also view the live version of the project at [Nerif Coding Challenge Live](https://nerif-coding-challenge.vercel.app/).
+
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
